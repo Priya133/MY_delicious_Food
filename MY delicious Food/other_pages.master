@@ -1,0 +1,191 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="other_pages.master.cs" Inherits="other_pages" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+ <meta charset="UTF-8">
+	<title>MY delicious Food </title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 397px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+    <div class="header">
+		<table>
+    <tr>
+    <td>
+    <%--<a href="index.html"><img src="images/logo.png" alt="Logo"></a>--%>
+    </td>
+    <td>
+    <b><h4 style="color: #800000; font-size: 50px; font-style: inherit; font-weight: 900; font-family: Gabriola"  > 
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <u> MY delicious Food</u>
+    </h4></b>
+    </td>
+
+    <td class="style1"></td>
+   <td>
+       <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Names="Gabriola" 
+           Font-Size="X-Large" ForeColor="Maroon" ></asp:Label><br />
+       <asp:ImageButton ID="ImageButton1" runat="server" Width="135px" Height="45px" 
+           ImageUrl="~/images/login-button.png" onclick="ImageButton1_Click" />
+   
+   </td>
+    </tr>
+    </table>
+		
+	</div>
+	<div class="body">
+		<div>
+			<div class="header">
+				<ul>
+					<li>
+						<a href="Home.aspx">Home</a>
+					</li>
+					<li>
+						<a href="All_Recipes.aspx">All Recipes</a>
+					</li>
+					
+					<li>
+						<a href="Health_tips.aspx">Health Tips</a>
+					</li>
+					<li>
+						<a href="Tips_Tricks.aspx">Tips&Tricks</a>
+					</li>
+                    <%--<li>
+						<a href="login.aspx">Join Us</a>
+					</li>--%>
+					<li>
+						<a href="About_us.aspx">About Us</a>
+					</li>
+				</ul>
+			</div>
+			<div class="body">
+				<div id="content">
+
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+   
+					<div>
+                        <div>
+                            <h4>
+                                We Have Free Templates for Everyone</h4>
+                            <p>
+                                Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What&#39;s more, they&#39;re absolutely free! You can do a lot with them. You can modify them. You can use them to design websites for clients, so long as you agree with the
+                                <a href="http://www.freewebsitetemplates.com/about/terms">Terms of Use</a>. You can even remove all our links if you want to.
+                            </p>
+                            <h4>
+                                We Have More Templates for You</h4>
+                            <p>
+                                Looking for more templates? Just browse through all our
+                                <a href="http://www.freewebsitetemplates.com/">Free Website Templates</a> and find what you&#39;re looking for. But if you don&#39;t find any website template you can use, you can try our
+                                <a href="http://www.freewebsitetemplates.com/freewebdesign/">Free Web Design</a> service and tell us all about it. Maybe you&#39;re looking for something different, something special. And we love the challenge of doing something different and something special.
+                            </p>
+                            <h4>
+                                Be Part of Our Community</h4>
+                            <p>
+                                If you&#39;re experiencing issues and concerns about this website template, join the discussion
+                                <a href="http://www.freewebsitetemplates.com/forums/">on our forum</a> and meet other people in the community who share the same interests with you.
+                            </p>
+                            <p>
+                                <br >Template details<br>Design version 4<br>Code version 2<br>Website Template details, discussion and updates for this
+                                <a href="http://www.freewebsitetemplates.com/discuss/personalwebsitetemplate/">Cooking Recipe Web Template</a>.<br>Website Template design by
+                                <a href="http://www.freewebsitetemplates.com/">Free Website Templates</a>.<br>Please feel free to remove some or all the text and links of this page and replace it with your own About content.
+                            </p>
+                        </div>
+                    </div>
+                         </asp:ContentPlaceHolder>
+
+				</div>
+			</div>
+		</div>
+		<div>
+       <div>
+
+         <asp:LinkButton ID="LinkButton1" runat="server" Font-Names="Gabriola" ForeColor="Maroon" 
+                           Font-Bold="True" Font-Size="XX-Large" Font-Underline="True" 
+                           PostBackUrl="~/Add_Recipes.aspx">Make Recipe Book</asp:LinkButton>
+                       <b>
+            <%--<h4 style="color: #800000; font-size:32px; font-style: inherit; font-weight: 900; font-family: Gabriola; width: 222px;"  > 
+     &nbsp;<u> <a href="Add_Recipes.aspx">Make recipe book</a></u>
+     </h4>--%>
+     </b>
+        </div>
+			<div>
+			<asp:LinkButton ID="LinkButton2" runat="server" Font-Names="Gabriola" ForeColor="Maroon" 
+                           Font-Bold="True" Font-Size="XX-Large" Font-Underline="True" 
+                           PostBackUrl="~/All_videos.aspx">Cooking Videos</asp:LinkButton>
+				<a href="All_videos.aspx"><img src="images/cooking-video.png" alt="Image"></a>
+				<span>Vegetable &amp; Rice Topping</span>
+			</div>
+			<div>
+				<h3>Featured Recipes</h3>
+				<ul id="featured">
+					<li>
+						<a href="All_Recipes.aspx"><img src="images/sandwich.jpg" alt="Image"></a><br />
+						<div>
+							<h2><a href="">Ham Sandwich</a></h2>
+							<span>by: Anna</span>
+						</div>
+					</li>
+                  
+					<li>
+						<a href="All_Recipes.aspx"><img src="images/biscuit-and-coffee.jpg" alt="Image"></a><br />
+						<div>
+							<h2><a href="">Biscuit &amp; Sandwich</a></h2>
+							<span>by: Sarah</span><br />
+						</div>
+					</li>
+					<%--<li>
+						<a href=""><img src="images/pizza.jpg" alt="Image"></a><br />
+						<div>
+							<h2><a href="">Delicious Pizza </a></h2>
+			
+						<span></span>
+                        </div>
+					</li>--%>
+				</ul>
+			</div>
+            <br />
+			<div>
+				<h3></h3>
+				<ul id="blog">
+					<li>
+                    <br />
+                    <br />
+								</li>
+					
+				</ul>
+			</div>
+
+			<div>
+				<h2>Get Updates</h2>
+				<a href="https://www.facebook.com/" target="_blank" id="facebook">Facebook</a>
+				
+				<a href="https://www.youtube.com/" target="_blank" id="youtube">Youtube</a>
+				
+				<a href="https://www.google.co.in" target="_blank" id="googleplus">Google&#43;</a>
+			</div>
+
+		</div>
+	</div>
+	<div class="footer">
+		<div>
+			
+		</div>
+	</div>
+        
+    </div>
+    </form>
+</body>
+</html>
